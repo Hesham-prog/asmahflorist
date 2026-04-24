@@ -131,7 +131,7 @@
 .empty-actions { display: flex; gap: 12px; margin-top: 8px; flex-wrap: wrap; justify-content: center; }
 
 /* Custom Order */
-.custom-order-section { padding: 0 0 80px; }
+.custom-order-section { padding: 50px 0 80px; }
 
 .custom-order-card {
   display: flex; align-items: center; gap: 24px;

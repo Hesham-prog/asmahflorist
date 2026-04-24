@@ -68,9 +68,7 @@ function StarRating({ rating }) {
 }
 
 const heroImages = [
-  '/hero_banner.png',
-  '/product_bouquet.png',
-  '/about_store.png'
+  '/Slider-1.png'
 ]
 
 function Home() {

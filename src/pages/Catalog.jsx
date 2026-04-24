@@ -195,7 +195,9 @@ function Catalog() {
       <section className="custom-order-section">
         <div className="container">
           <div className="custom-order-card glass-card">
-            <div className="custom-order-icon">🎨</div>
+            <div className="custom-order-icon">
+              <img src="/logo.png" alt="Asmah Florist Logo" style={{ width: '60px', height: '60px', objectFit: 'contain' }} />
+            </div>
             <div className="custom-order-info">
               <h3>Ingin Bunga Custom?</h3>
               <p>Kami siap membuat rangkaian bunga sesuai tema, warna, dan budget Anda!</p>

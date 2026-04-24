@@ -11,7 +11,7 @@ const values = [
 
 const stats = [
   { num: '500+', label: 'Pelanggan Puas', icon: <Users size={24} /> },
-  { num: '5+', label: 'Tahun Pengalaman', icon: <Award size={24} /> },
+  { num: '2+', label: 'Tahun Pengalaman', icon: <Award size={24} /> },
   { num: '50+', label: 'Jenis Bunga', icon: <Heart size={24} /> },
   { num: '100%', label: 'Bunga Segar', icon: <CheckCircle2 size={24} /> },
 ]
@@ -41,21 +41,20 @@ function About() {
 
           <div className="about-story-text">
             <span className="badge badge-pink">Cerita Kami</span>
-            <h2 className="about-story-title">Berawal dari Kecintaan terhadap Bunga</h2>
+            <h2 className="about-story-title">Langkah Kecil yang Dirintis dengan Hati</h2>
             <p>
-              Asmah Florist lahir dari passion yang tulus terhadap keindahan alam, khususnya bunga. 
-              Berbekal pengalaman lebih dari 5 tahun, toko bunga ini bermula dari sebuah lapak 
-              kecil yang kini terus berkembang melayani pelanggan dengan sepenuh hati.
+              Asmah Florist lahir dari kecintaan kami yang mendalam terhadap keindahan alam, khususnya bunga. 
+              Berdiri sejak lebih dari 2 tahun yang lalu, kami memulai langkah pertama dari sebuah usaha 
+              kecil yang dirintis dengan penuh semangat dan ketulusan.
             </p>
             <p>
-              Dengan dedikasi dan cinta yang tulus, perlahan kami tumbuh menjadi salah satu florist 
-              terpercaya di kota ini. Kepercayaan ribuan pelanggan adalah motivasi terbesar kami 
-              untuk terus berkembang dan menghadirkan yang terbaik.
+              Meski perjalanan kami masih terbilang muda, setiap pesanan yang datang selalu kami kerjakan 
+              seperti merangkai bunga untuk keluarga sendiri. Kepercayaan Anda—sekecil apapun acaranya—menjadi 
+              penyemangat utama bagi kami untuk terus belajar dan bertumbuh memberikan yang terbaik.
             </p>
             <p>
-              Hari ini, kami bangga melayani berbagai kebutuhan bunga mulai dari pernikahan, 
-              wisuda, grand opening, hingga ekspresi sederhana rasa sayang kepada orang-orang 
-              tercinta Anda.
+              Melalui karya-karya kami yang sederhana namun bermakna, kami berharap Asmah Florist dapat 
+              terus hadir membantu Anda merangkai pesan dan kebahagiaan untuk orang-orang tersayang.
             </p>
 
             <a
