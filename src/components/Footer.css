@@ -1,0 +1,233 @@
+/* Footer.css — Gray & Cream Palette */
+.footer {
+  position: relative;
+  background: #2c3328;   /* Dark charcoal — echoes primary dark */
+  border-top: 3px solid #546b45;
+  padding: 64px 0 0;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.footer-glow {
+  position: absolute;
+  top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 600px; height: 2px;
+  background: linear-gradient(90deg, transparent, #7c8f6f, #d4a090, #7c8f6f, transparent);
+  box-shadow: 0 0 30px 6px rgba(130, 150, 120, 0.12);
+}
+
+.footer::before {
+  content: '';
+  position: absolute; inset: 0;
+  background-image:
+    radial-gradient(circle at 15% 50%, rgba(130, 150, 120, 0.04) 0%, transparent 55%),
+    radial-gradient(circle at 85% 20%, rgba(212, 160, 144, 0.04) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+/* Grid */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+/* Brand */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.footer-logo-icon {
+  width: 44px; height: 44px;
+  background: linear-gradient(135deg, #546b45, #3b4d30);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(84, 107, 69, 0.35);
+}
+
+.footer-logo-name {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #f5f0e6;
+}
+
+.footer-logo-tagline {
+  display: block;
+  font-size: 0.68rem;
+  color: #909090;
+  letter-spacing: 1px;
+  margin-top: 3px;
+  font-style: italic;
+}
+
+.footer-desc {
+  color: rgba(245, 240, 230, 0.5);
+  font-size: 0.875rem;
+  line-height: 1.75;
+  margin-bottom: 22px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 10px;
+}
+
+.social-btn {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: rgba(245, 240, 230, 0.06);
+  border: 1px solid rgba(245, 240, 230, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(245, 240, 230, 0.5);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.social-btn:hover {
+  background: rgba(84, 107, 69, 0.3);
+  border-color: #7c8f6f;
+  color: #f5f0e6;
+  transform: translateY(-3px);
+}
+
+.social-btn.whatsapp:hover {
+  background: rgba(37, 211, 102, 0.15);
+  border-color: #25d366;
+  color: #25d366;
+}
+
+/* Columns */
+.footer-col-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  color: #f5f0e6;
+  margin-bottom: 18px;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.footer-col-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 28px; height: 2px;
+  background: linear-gradient(90deg, #d4a090, #7c8f6f);
+  border-radius: 2px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: rgba(245, 240, 230, 0.48);
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: #909090;
+  padding-left: 6px;
+}
+
+/* Contact */
+.footer-contact {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: rgba(245, 240, 230, 0.5);
+  font-size: 0.875rem;
+}
+
+.footer-contact li svg { color: #909090; flex-shrink: 0; margin-top: 2px; }
+
+.footer-contact a {
+  color: rgba(245, 240, 230, 0.5);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.footer-contact a:hover { color: #d4a090; }
+
+.footer-hours {
+  background: rgba(245, 240, 230, 0.05);
+  border: 1px solid rgba(245, 240, 230, 0.09);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+
+.hours-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #909090;
+  margin-bottom: 8px;
+}
+
+.footer-hours p {
+  font-size: 0.8rem;
+  color: rgba(245, 240, 230, 0.42);
+  line-height: 1.7;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  border-top: 1px solid rgba(245, 240, 230, 0.07);
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-bottom p {
+  font-size: 0.825rem;
+  color: rgba(245, 240, 230, 0.32);
+}
+
+.made-with {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.heart-icon {
+  color: #d4a090;
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+  .footer-brand { grid-column: 1 / -1; }
+}
+@media (max-width: 600px) {
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-brand { grid-column: auto; }
+  .footer-bottom { flex-direction: column; text-align: center; }
+}

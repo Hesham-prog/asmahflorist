@@ -1,0 +1,288 @@
+/* ================================
+   ASMAH FLORIST - Global Styles
+   Logo-Derived Palette:
+   Sage Green + Blush Pink + Cream
+   ================================ */
+
+:root {
+  /* === PRIMARY: Sage Green (from "Papan Wedding" text in catalog) === */
+  --primary:       #546b45;   /* Medium Sage Green */
+  --primary-light: #7c8f6f;   /* Light gray */
+  --primary-dark:  #3b4d30;   /* Dark gray */
+
+  /* === ACCENT: Blush Pink (from logo flowers) === */
+  --accent:        #d4a090;   /* Soft blush */
+  --accent-light:  #e8c4b8;   /* Pale blush */
+  --accent-dark:   #b8806e;   /* Deeper blush */
+
+  /* === BACKGROUNDS: Warm Cream (from logo background) === */
+  --bg-main:       #f5f0e6;   /* Warm ivory — logo bg */
+  --bg-surface:    #faf7f2;   /* Slightly lighter cream */
+  --bg-card:       #ffffff;   /* White card */
+  --bg-card-hover: #f9f5ef;   /* Warm white hover */
+  --bg-section-alt:#edeae2;   /* Deeper cream for alternating sections */
+
+  /* Semi-transparent overlays */
+  --bg-glass:      rgba(84, 107, 69, 0.05);
+  --bg-glass-hover:rgba(84, 107, 69, 0.09);
+
+  /* === TEXT: Sage Green tones === */
+  --text-primary:   #2c3328;  /* Very dark charcoal */
+  --text-secondary: #546b45;  /* Medium gray */
+  --text-muted:     #909090;  /* Light gray */
+
+  /* === BORDERS === */
+  --border-color:       rgba(84, 107, 69, 0.18);
+  --border-color-light: rgba(84, 107, 69, 0.09);
+  --border-blush:       rgba(212, 160, 144, 0.3);
+
+  /* === SHADOWS === */
+  --shadow-card:      0 4px 24px rgba(0, 0, 0, 0.07);
+  --shadow-card-hover:0 12px 40px rgba(0, 0, 0, 0.12);
+  --shadow-green:     0 4px 20px rgba(84, 107, 69, 0.22);
+
+  /* === RADII === */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  /* === TRANSITIONS === */
+  --transition:      all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-fast: all 0.15s ease;
+
+  /* === FONTS === */
+  --font-display: 'Playfair Display', serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* === LAYOUT === */
+  --navbar-height: 70px;
+}
+
+/* ================================
+   Reset & Base
+   ================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-surface); }
+::-webkit-scrollbar-thumb { background: var(--primary-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+a { text-decoration: none; color: inherit; }
+img { max-width: 100%; height: auto; display: block; }
+button { cursor: pointer; font-family: var(--font-body); border: none; outline: none; }
+
+/* ================================
+   Utility Classes
+   ================================ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.15;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+/* Buttons */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  box-shadow: var(--shadow-green);
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(84, 107, 69, 0.36);
+  background: linear-gradient(135deg, var(--primary-light), var(--primary));
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--primary);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: var(--transition);
+  border: 2px solid var(--primary);
+  cursor: pointer;
+}
+.btn-secondary:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  padding: 13px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.28);
+  border: none;
+  cursor: pointer;
+}
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+}
+
+/* Glass Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--border-color-light);
+  border-radius: var(--radius-lg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-card);
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 5px 16px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+/* Gray badge — primary brand */
+.badge-pink,
+.badge-green {
+  background: rgba(84, 107, 69, 0.1);
+  color: var(--primary-dark);
+  border: 1px solid rgba(84, 107, 69, 0.2);
+}
+
+/* Blush badge — for soft accents */
+.badge-blush {
+  background: rgba(212, 160, 144, 0.12);
+  color: var(--accent-dark);
+  border: 1px solid var(--border-blush);
+}
+
+/* Page Layout */
+.page-wrapper { min-height: 100vh; }
+.page-wrapper-offset { padding-top: 70px; }
+
+/* Thin decorative line */
+.divider-sage {
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--primary-light));
+  border-radius: 2px;
+  margin: 12px auto;
+}
+
+/* Ambient orbs — very subtle gray/blush */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.05;
+  pointer-events: none;
+  z-index: 0;
+}
+.orb-1 {
+  width: 700px; height: 700px;
+  background: radial-gradient(circle, #546b45 0%, transparent 70%);
+  top: -280px; right: -200px;
+  animation: float-orb 10s ease-in-out infinite alternate;
+}
+.orb-2 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+  bottom: -200px; left: -200px;
+  animation: float-orb 13s ease-in-out infinite alternate-reverse;
+}
+@keyframes float-orb {
+  from { transform: translate(0,0) scale(1); }
+  to   { transform: translate(18px,18px) scale(1.07); }
+}
+
+/* ================================
+   Animations
+   ================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 14px rgba(84, 107, 69, 0.22); }
+  50%       { box-shadow: 0 0 28px rgba(84, 107, 69, 0.45); }
+}
+
+.animate-fade-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container { padding: 0 16px; }
+}
