@@ -39,6 +39,26 @@ function ProductCard({ product, animDelay = 0 }) {
     return () => clearInterval(interval)
   }, [hasMultipleImages, isPaused, hovered, isModalOpen, images.length])
 
+  // Lock body scroll and listen for Escape key when modal is open
+  useEffect(() => {
+    if (!isModalOpen) return
+
+    const originalOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setIsModalOpen(false)
+      }
+    }
+
+    window.addEventListener('keydown', handleKeyDown)
+    return () => {
+      document.body.style.overflow = originalOverflow
+      window.removeEventListener('keydown', handleKeyDown)
+    }
+  }, [isModalOpen])
+
   // Navigation handlers
   const handlePrev = (e) => {
     e.stopPropagation()
@@ -312,15 +332,24 @@ function ProductCard({ product, animDelay = 0 }) {
                   <span className="product-modal-price">{product.price}</span>
                 </div>
                 
-                <a
-                  href={getWhatsAppLink(product.name, product.price)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="product-order-btn modal-order-btn"
-                >
-                  <MessageCircle size={18} />
-                  Pesan via WhatsApp
-                </a>
+                <div className="modal-actions-row">
+                  <a
+                    href={getWhatsAppLink(product.name, product.price)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="product-order-btn modal-order-btn"
+                  >
+                    <MessageCircle size={18} />
+                    Pesan via WhatsApp
+                  </a>
+                  <button
+                    type="button"
+                    className="modal-secondary-close-btn"
+                    onClick={() => setIsModalOpen(false)}
+                  >
+                    Tutup
+                  </button>
+                </div>
               </div>
             </div>
           </div>
