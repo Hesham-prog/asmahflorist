@@ -75,6 +75,7 @@ function Footer() {
             <ul className="footer-links">
               <li><Link to="/catalog?cat=papan">🏵️ Papan Bunga</Link></li>
               <li><Link to="/catalog?cat=anggrek">🌺 Bunga Anggrek</Link></li>
+              <li><Link to="/catalog?cat=vas">🏺 Bunga Vas</Link></li>
               <li><Link to="/catalog?cat=bouquet">💐 Bouquet</Link></li>
               <li><Link to="/catalog?cat=standing">🌹 Standing Flower</Link></li>
             </ul>

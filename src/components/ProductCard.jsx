@@ -229,8 +229,8 @@ function ProductCard({ product, animDelay = 0 }) {
 
           <div className="product-footer">
             <div className="product-price-block">
-              {/* Hanya tampilkan 'Mulai dari' jika kategori Bouquet atau produk memiliki showMulaiDari */}
-              {(product.category === 'bouquet' || product.showMulaiDari) && (
+              {/* Hanya tampilkan 'Mulai dari' jika kategori Bouquet/Vas atau produk memiliki showMulaiDari */}
+              {(product.category === 'bouquet' || product.category === 'vas' || product.showMulaiDari) && (
                 <span className="product-price-label">Mulai dari</span>
               )}
               <span className="product-price">{product.price}</span>
@@ -326,7 +326,7 @@ function ProductCard({ product, animDelay = 0 }) {
 
               <div style={{ marginTop: 'auto' }}>
                 <div className="product-price-block" style={{ marginBottom: '12px' }}>
-                  {(product.category === 'bouquet' || product.showMulaiDari) && (
+                  {(product.category === 'bouquet' || product.category === 'vas' || product.showMulaiDari) && (
                     <span className="product-price-label">Mulai dari</span>
                   )}
                   <span className="product-modal-price">{product.price}</span>
